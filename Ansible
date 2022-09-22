@@ -1,0 +1,10 @@
+name: Config elk VM with Docker
+  hosts: elk
+  remote_user: azadmin
+  become: true
+  tasks:
+    - name: docker.io
+      apt:
+        update_cache: yes
+        name: docker.io
+        state: present
